@@ -1,18 +1,22 @@
-# Salesforce DX Project: Next Steps
+# Présentation
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Le présent repo contient la solution  de l'épreuve Keobiz.
 
-## How Do You Plan to Deploy Your Changes?
+Les codes sont testés sur une scratch org 
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Les fichier
 
-## Configure Your Salesforce DX Project
+- [Classes Apex]
+Dans le dossier classes, le code de la solution est dans les classes : AccountTriggerHandler et Account_CC (qui contient les méthodes statiques pour la partie traitement et sauvegarde)
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+Au niveau de la classe AccountTriggerHandler, les deux principales méthodes sont : afterUpdate et commitChanges, l'utilisaton de cette dernière permet de reposer les DML ainsi que les requête jusqu'à la fin. La classe hérite de classe abstraite TriggerHandler utile pour avoir un nivau d'abstraction permettant de développer 
 
-## Read All About It
+la classe Account_CC est un helper utilisée par  AccountTriggerHandler
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+- [Trigger] AccouuntTrigger
+
+- [NamedCredentials] pour la configuration du Endpoint
+
+- [Tests]
+La classes de test sont organisées dans un dossier séparé, pour faciliter la partie DevOps : déploiement, validation, sonar, ...
+
