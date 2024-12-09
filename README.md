@@ -4,7 +4,7 @@ Le présent repo contient la solution  de l'épreuve Keobiz.
 
 Les codes sont testés sur une scratch org 
 
-## Les fichier
+# Les fichiers
 
 - [Classes Apex]
 Dans le dossier classes, le code de la solution est dans les classes : AccountTriggerHandler et Account_CC (qui contient les méthodes statiques pour la partie traitement et sauvegarde)
