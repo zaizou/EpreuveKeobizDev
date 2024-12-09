@@ -1,0 +1,12 @@
+
+# Salesforce cache
+.sfdx/
+.sf/
+manifest/
+
+# Visual Code Studio files
+.vscode
+
+# Sonarqube
+scannerwork/
+.vim-force.com/
